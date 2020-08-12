@@ -3,77 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oBlog</title>
+    <title>Webpack</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <!-- Page : Home -->
-<body>
+<body class="home">
     <!-- Layout : Header -->
     <header class="header">
-        <!-- Components : Logo -->
+        <!-- Component : Logo -->
         <div class="logo">
-            <h2 class="logo__title">oBlog</h2>
-            <h4 class="logo__subtitle">Un simple blog</h3>
+            <h1 class="logo__title">oBlog</h1>
+            <span class="logo__description">Un simple blog</span>
         </div>
-        <!-- Components : Menu -->
-        <nav class="menu">
-            <a href="#" class="menu__item">Catégories</a>
-            <a href="#" class="menu__item">A propos</a>
-            <a href="#" class="menu__item">Contact</a>
+        <!-- Component : Menu -->
+        <nav class="menu menu--link-bold">
+            <ul class="menu__list">
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Catégories</a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">À propos</a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Contact</a></li>
+            </ul>
         </nav>
-        <!-- Components : Search -->
-        <form action="" class="search">
-            <img src="#" alt="" class="search__logo">
-            <input type="search" placeholder="Rechercher" class="search__field">
-        </form>
-        <!-- Components : Button-->
-        <button class="button--subscribe">S'abonner</button>
+        <!-- Component : Search  -->
+        <form action="" class="search"><input type="search" class="search__input" placeholder="Rechercher"></form>
+        <!-- Component : Button -->
+        <a href="#" class="button">S'abonner</a>
     </header>
+    <!-- Layout : Sidebar -->
+    <aside class="sidebar">
+        <!-- Sidebar Title -->
+        <span class="sidebar__title">Latest</span>
+        <!-- Component : Menu -->
+        <nav class="menu menu--vertical menu--link-uppercase menu--small">
+            <h2 class="menu__title">Vortex</h2>
+            <ul class="menu__list">
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Lorem ipsum dolor sit amet.</a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, impedit?</a></li>
+            </ul>
+        </nav>
+        <!-- Component : Menu -->
+        <nav class="menu menu--vertical menu--link-uppercase menu--small">
+            <h2 class="menu__title">Travel tips</h2>
+            <ul class="menu__list">
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Lorem, ipsum dolor.</a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsa quia quam ex debitis eveniet!</a></li>
+            </ul>
+        </nav>
+    </aside>
     <!-- Layout : Main -->
     <main class="main">
-        <!-- Components : Sidebar -->
-        <div class="sidebar">
-            <h3 class="sidebar__title"></h3>
-            <div class="sidebar__item">
-                <h5 class="sidebar__item__title">Explorer</h5>
-                <a href="" class="sidebar__item__link">Lorem ipsum dolor sit amet.</a>
-            </div>
-            <div class="sidebar__item">
-                <h5 class="sidebar__item__title">Travel tips</h5>
-                <a href="" class="sidebar__item__link">Lorem ipsum dolor sit amet.</a>
-            </div>
-            <div class="sidebar__item">
-                <h5 class="sidebar__item__title">Places</h5>
-                <a href="" class="sidebar__item__link">Lorem ipsum dolor sit amet.</a>
-            </div>
-            <div class="sidebar__item">
-                <h5 class="sidebar__item__title">Pursuits</h5>
-                <a href="" class="sidebar__item__link">Lorem ipsum dolor sit amet.</a>
-            </div>
-        </div>
-        <!-- Components : Post -->
-        <article class="post">
-            <h1 class="post__title">Five reasons to visit Lviv, Ukraine</h1>
-            <p class="post_info">2d ago <span>by Earl Elliot</span></p>
-            <img src="#" alt="" class="post__image">
-            <p class="post__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ut officia commodi. Possimus obcaecati rem, illo rerum dolorem saepe itaque, necessitatibus dolores soluta, enim iure temporibus officia incidunt accusantium. Ducimus atque ea maiores quas sed, ex ipsam voluptatum! Iste, ipsa! Asperiores vero, pariatur exercitationem corporis corrupti quis error quas omnis.</p>
+        <!-- Component : Post -->
+        <article class="post post--excerpt">
+            <header class="post__header">
+                <h3 class="post__header__title"><span>Five reasons to visit Lviv, Ukraine</span></h3>
+                <img src="images/lviv.jpg" alt="Lviv, Ukraine" class="post__header__image">
+            </header>
+            <main class="post__excerpt">
+                <p>Forever promising to become the next Prague or Krakow, this million-strong Austro-Hungarian gem, packed with a millennium of churches, a huddle of bean-perfumed coffee houses and Eastern Europe's quirkiest bunch of restaurants, has been on the verge of bursting onto the international tourism stage for decades&hellip;</p>
+            </main>
+            <footer class="post__footer"><span class="post__footer__date">2d ago</span> &bull; by <span class="post__footer__author">John Doe</span></footer>
         </article>
     </main>
     <!-- Layout : Footer -->
     <footer class="footer">
-        <!-- Components : Socials-->
-        <nav class="socials">
-            <a href="" class="socials__link">Facebook</a>
-            <a href="" class="socials__link">Twitter</a>
-            <a href="" class="socials__link">Insta</a>
+        <!-- Component : Menu -->
+        <nav class="menu menu--large">
+            <ul class="menu__list">
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link"><i class="fa fa-facebook" title="Facebook"></i></a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link"><i class="fa fa-twitter" title="Twitter"></i></a></li>
+                <li class="menu__list__item"><a href="#" class="menu__list__item__link"><i class="fa fa-instagram" title="Instagram"></i></a></li>
+            </ul>
         </nav>
-        <img src="#" alt="" class="footer_logo">
-        <!-- Components : Legals -->
-        <div class="legals">
-            <h5 class="legals__title">Blog oClock</h5>
-            <p class="legals_copyright">copyright 2017 - The oClock Demo blog for students</p>
-
-        </div>
+        <!-- Component : Logo -->
+        <a href="#" class="logo logo--without-border"><span class="logo__title">o</span></a>
+        <!-- Footer Signature -->
+        <div class="footer__signature"><span class="footer__signature__title">Blog O'clock</span><span class="footer__signature__description">Copyright 2019 &copy; - The O'clock demo blog for students</span></div>
     </footer>
     <script src="js/app.js"></script>
 </body>
